@@ -25,4 +25,5 @@ function findMaxElem(arr){
     }
     console.log(max)
 }
-findMaxElem([1,3,5,7,9,3,1])
+// findMaxElem([1,3,5,7,9,3,1])
+
