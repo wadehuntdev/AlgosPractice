@@ -27,13 +27,47 @@ function findMaxElem(arr){
 }
 // findMaxElem([1,3,5,7,9,3,1])
 
- function findOdds(arr){
+// Create an array with all the odd integers between 1 and 255 (inclusive).
+function findOdds(start, end){
     let odds = [];
-    for(i=0; i<arr.lenth ; i++){
-        if(arr[i] % 2 != 0){
-            odds.push(arr[i])
+    for(i=start; i<=end ; i++){
+        if(i % 2 !== 0){
+            odds.push(i)
         }
     }
     console.log(odds)
- }
- findOdds([1,2,3,4,5,6,7,8,9,0,1,2,3])
+}
+//  findOdds(1,255)
+
+// Given an array and a value Y, count and print the number of array values greater than Y. 
+function greaterThan(arr,value){
+    let greater =[];
+    for(i=0; i<arr.length ; i++){
+        if(arr[i] > value ){
+            greater.push(arr[i])
+        }
+    }
+    console.log(greater)
+}
+// greaterThan([1,3,5,7,34,54,33,12,66],14)
+
+// Given an array, print the max, min and average values for that array.
+function minMaxAverage(arr){
+    let min = arr[0];
+    let max = arr[0];
+    let avg = 0;
+    for(i=0; i<arr.length; i++){
+        if(arr[i] < min){
+            min = arr[i]
+        }
+        if(arr[i] > max){
+            max = arr[i]
+        }
+        avg =avg+arr[i];
+    }
+    avg = avg/arr.length;
+    console.log("Min is : " + min )
+    console.log("Max is : " + max )
+    console.log("Average is : " + avg )
+}
+// minMaxAverage([1,3,5,7,9,3,5,4,-1])
