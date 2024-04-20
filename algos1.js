@@ -71,3 +71,42 @@ function minMaxAverage(arr){
     console.log("Average is : " + avg )
 }
 // minMaxAverage([1,3,5,7,9,3,5,4,-1])
+
+// Replace any negative array values with 'Dojo'​.
+function noNegatives(arr){
+    for(i=0;i<arr.length;i++){
+        if(arr[i] < 0){
+            arr[i] = 'Dojo'
+        }
+    }
+    console.log(arr)
+}
+// noNegatives([1,3,-4,5,8,-3])
+
+// Print all odd integers from 1 to 255.
+function printOdds(start,end){
+    for(i=start;i<=end;i++){
+        if(i % 2 !== 0){
+            console.log(i)
+        }
+    }
+}
+// printOdds(1,255)
+
+// Iterate through a given array, printing each value
+function iterate(arr){
+    for(i=0;i<arr.length;i++){
+        console.log(arr[i])
+    }
+}
+// iterate([1,2,3,4,5,6])
+
+// Analyze an array’s values and print the average.
+function getAverage(arr){
+    let sum = 0
+    for(i=0;i<arr.length;i++){
+        sum = sum+arr[i];
+    }
+    console.log("Average is : " + sum/arr.length)
+}
+getAverage([1,3,5,7,9])
