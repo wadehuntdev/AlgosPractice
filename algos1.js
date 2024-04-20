@@ -27,3 +27,13 @@ function findMaxElem(arr){
 }
 // findMaxElem([1,3,5,7,9,3,1])
 
+ function findOdds(arr){
+    let odds = [];
+    for(i=0; i<arr.lenth ; i++){
+        if(arr[i] % 2 != 0){
+            odds.push(arr[i])
+        }
+    }
+    console.log(odds)
+ }
+ findOdds([1,2,3,4,5,6,7,8,9,0,1,2,3])
