@@ -109,4 +109,13 @@ function getAverage(arr){
     }
     console.log("Average is : " + sum/arr.length)
 }
-getAverage([1,3,5,7,9])
+// getAverage([1,3,5,7,9])
+
+// Square each value in a given array, returning that same array with changed values.
+function squaredArr(arr){
+    for(i=0;i<arr.length;i++){
+        arr[i] = arr[i]*arr[i]
+    }
+    console.log(arr)
+}
+squaredArr([1,2,3,4])
