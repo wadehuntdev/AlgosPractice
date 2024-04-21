@@ -118,4 +118,26 @@ function squaredArr(arr){
     }
     console.log(arr)
 }
-squaredArr([1,2,3,4])
+// squaredArr([1,2,3,4])
+
+// Return the given array, after setting any negative values to zero.
+function zeroNegatives(arr){
+    for(i=0;i<arr.length;i++){
+        if(arr[i] < 0){
+            arr[i] = 0
+        }
+    }
+    console.log(arr)
+}
+// zeroNegatives([1,3,-4,5,8,-33,57,-9])
+
+// Given an array, move all values forward by one index, dropping the first and leaving a '0'​ value at the
+// end.
+function shiftArray(arr){
+    for(i=0;i<arr.length;i++){
+        arr[i] = arr[i+1]
+    }
+    arr[arr.length-1] = 0
+    console.log(arr)
+}
+// shiftArray([1,3,4,7,3,12])
