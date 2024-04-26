@@ -49,4 +49,24 @@ function betterThreesFives(start,end){
     }
     console.log("Final sum:", totalSum);
 }
-betterThreesFives(1,50)
+// betterThreesFives(1,50)
+
+// Implement generateCoinChange(cents)​ that accepts a parameter for the number of cents, and
+// computes how to represent that amount with the smallest number of coins. Console.log the result.
+function generateCoinChange(cents){
+    let coins = [25,10,5,1];
+    let coinNames = ['Quarters', 'Dimes', 'Nickels', 'Pennies'];
+    let change = {};
+
+    for(let i=0; i< coins.length ; i++){
+        const coinValue = coins[i];
+        const coinName = coinNames[i];
+        let numCoins = Math.floor( cents / coinValue);
+        if(numCoins > 0){
+            change[coinName] = numCoins;
+        }
+        cents -= numCoins * coinValue;
+    };
+    console.log(change);
+}
+// generateCoinChange(86)
