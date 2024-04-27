@@ -70,3 +70,45 @@ function generateCoinChange(cents){
     console.log(change);
 }
 // generateCoinChange(86)
+
+// Implement a ‘die’ that randomly returns an
+// integer between 1 and 6 inclusive. Roll a pair of
+// these dice, tracking the statistics until doubles
+// are rolled. Display the number of rolls, min, max,
+// and average.
+
+function statisticDoubles() {
+    function rollDice(numOfSides){
+        return Math.floor(Math.random() * numOfSides);
+    }
+    let rollNumber = 1;
+    let sum = 0;
+    let min = 1;
+    let max = 0;
+    let rollDieOne = [rollDice(6)];
+    let rollDieTwo = [rollDice(6)];
+    while(rollDieOne[rollNumber] !== rollDieTwo[rollNumber]){
+        rollDieOne.push(rollDice(6))
+        rollDieTwo.push(rollDice(6))
+        rollNumber++
+    }
+    for(let i =0 ; i < rollDieOne.length ; i++){
+        sum = sum + rollDieOne[i];
+    }
+    for(let i =0 ; i < rollDieOne.length ; i++){
+        sum = sum + rollDieTwo[i];
+    }
+    for(let i =0 ; i < rollDieOne.length ; i++){
+        if(rollDieOne[i] > min ){
+            min = rollDieOne[i]
+        }
+        if(rollDieOne[i] > max){
+            max = rollDieOne[i]
+        }
+    }
+    console.log("It took " + rollNumber + " rolls to get doubles");
+    console.log("The lowest roll was : " + min)
+    console.log("The highest roll was : " + max)
+    console.log("The average of all rolls is : " + sum/(rollDieOne.length*2))
+}
+statisticDoubles()
