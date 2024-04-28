@@ -110,10 +110,14 @@ function statisticDoubles() {
 // that final one digit result.
 
 function sumToOne(num){
-    let sum = 0;
-    for(let i = 1 ; i > num.length ; i++){
-        sum = sum + num[i];
+    while( num > 10){
+        let sum = 0;
+        while(num > 0){
+            sum += num % 10;
+            num = Math.floor(num/10);
+        }
+        num = sum;
     }
-    console.log(sum)
+    console.log(num)
 }
-sumToOne(18)
+sumToOne(455)
