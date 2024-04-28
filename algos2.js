@@ -120,4 +120,18 @@ function sumToOne(num){
     }
     console.log(num)
 }
-sumToOne(455)
+// sumToOne(455)
+
+// Implement the Fibonacci function, a famous mathematical equation that generates a numerical
+// sequence such that each number is the sum of the previous two. The Fibonacci numbers at index 0
+// and 1, coincidentally, have values of 0 and 1. Your function should accept an argument of which
+// Fibonacci number.
+function fibonacci(fibNum){
+    let fib = [0,1];
+    for (let i = 1; i <= fibNum ; i++){
+        fib.push((fib[i]+fib[i-1]))
+    }
+    console.log(fib[fibNum])
+}
+// fibonacci(44)
+
