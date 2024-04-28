@@ -103,3 +103,17 @@ function statisticDoubles() {
     console.log("The average of all rolls is " + sum/numRolls + ".")
 }
 // statisticDoubles();
+
+// Implement a function sumToOne(num)​ that,
+// given a number, sums that number’s digits
+// repeatedly until the sum is only one digit. Return
+// that final one digit result.
+
+function sumToOne(num){
+    let sum = 0;
+    for(let i = 1 ; i > num.length ; i++){
+        sum = sum + num[i];
+    }
+    console.log(sum)
+}
+sumToOne(18)
