@@ -49,11 +49,12 @@ function popFront(arr){
 // except pop()​. Think of PopFront(arr)​ as
 // equivalent to RemoveAt(arr,0)
 function removeAt(arr,value){
-    let i = arr.length-1;
-    while(i > value){
-            arr[i-1] = arr[i] 
-            i--;
+    const removedValue = arr[value];
+    for( let i = value ; i < (arr.length - 1) ; i++){
+        arr[i] = (arr[i + 1])
     }
+    arr.pop();
     console.log(arr)
 }
-removeAt([1,3,5,7,9,11,13,15], 4)
+// removeAt([1,3,5,7,9,11,13,15], 4)
+
